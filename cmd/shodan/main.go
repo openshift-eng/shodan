@@ -15,8 +15,8 @@ import (
 	"k8s.io/component-base/logs"
 	"k8s.io/klog"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cmd/operator"
-	"github.com/mfojtik/bugzilla-operator/pkg/version"
+	"github.com/openshift-eng/shodan/pkg/cmd/operator"
+	"github.com/openshift-eng/shodan/pkg/version"
 )
 
 func main() {
@@ -42,7 +42,7 @@ func main() {
 
 func NewOperatorCommand(ctx context.Context) *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "bugzilla-operator",
+		Use:   "openshift-eng/shodan",
 		Short: "An operator that operates bugzilla numbers and automatically improve product quality",
 		PersistentPreRun: func(cmd *cobra.Command, args []string) {
 			switch {

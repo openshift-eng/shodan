@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/google/go-github/v33/github"
-	operatorslack "github.com/mfojtik/bugzilla-operator/pkg/slack"
+	operatorslack "github.com/openshift-eng/shodan/pkg/slack"
 	"github.com/slack-go/slack"
 	"github.com/slack-go/slack/slackevents"
 	"k8s.io/klog"

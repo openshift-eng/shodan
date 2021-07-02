@@ -7,8 +7,8 @@ import (
 	"github.com/eparis/bugzilla"
 	"k8s.io/klog"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	"github.com/mfojtik/bugzilla-operator/pkg/slack"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	"github.com/openshift-eng/shodan/pkg/slack"
 )
 
 type loggingReadOnlyClient struct {

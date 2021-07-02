@@ -8,9 +8,9 @@ import (
 	"github.com/openshift/library-go/pkg/operator/events"
 
 	"github.com/eparis/bugzilla"
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
 )
 
 func TestNewFirstTeamCommentController(t *testing.T) {

@@ -10,7 +10,7 @@ include $(addprefix ./vendor/github.com/openshift/build-machinery-go/make/, \
 
 IMAGE_REGISTRY?=quay.io
 
-$(call build-image,bugzilla-operator,$(IMAGE_REGISTRY)/mfojtik/bugzilla-operator:dev,./Dockerfile,.)
+$(call build-image,openshift-eng/shodan,$(IMAGE_REGISTRY)/shodan:dev,./Dockerfile,.)
 
 install:
 	kubectl apply -f ./manifests
@@ -18,13 +18,13 @@ install:
 .PHONY: install
 
 uninstall:
-	kubectl delete namespace/bugzilla-operator
+	kubectl delete namespace/openshift-eng
 .PHONY: uninstall
 
 push:
-	docker push quay.io/mfojtik/bugzilla-operator:dev
+	docker push quay.io/openshift-eng/shodan:dev
 .PHONY: push
 
 clean:
-	$(RM) ./bugzilla-operator
+	$(RM) shodan
 .PHONY: clean

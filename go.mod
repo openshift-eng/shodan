@@ -1,4 +1,4 @@
-module github.com/mfojtik/bugzilla-operator
+module github.com/openshift-eng/shodan
 
 go 1.14
 

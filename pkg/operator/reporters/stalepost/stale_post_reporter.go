@@ -15,10 +15,10 @@ import (
 	errutil "k8s.io/apimachinery/pkg/util/errors"
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/bugutil"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	"github.com/openshift-eng/shodan/pkg/operator/bugutil"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
 )
 
 // StalePostReporter monitor bugs that are in POST state and report them.

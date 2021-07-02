@@ -16,9 +16,9 @@ import (
 	errutil "k8s.io/apimachinery/pkg/util/errors"
 	"k8s.io/klog"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/bugutil"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/operator/bugutil"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
 )
 
 const assignBlockID = "first-team-comment-controller/accept-assignment"

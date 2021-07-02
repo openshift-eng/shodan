@@ -15,10 +15,10 @@ import (
 	"github.com/openshift/library-go/pkg/controller/factory"
 	"github.com/openshift/library-go/pkg/operator/events"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/bugutil"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	"github.com/openshift-eng/shodan/pkg/operator/bugutil"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
 )
 
 // ReassignReporter lists all OpenShift bugs which has a change recorded in last 7 days. If that change was component change it persist the incoming and outgoing (target)

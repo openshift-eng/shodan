@@ -6,12 +6,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/bugutil"
+	"github.com/openshift-eng/shodan/pkg/operator/bugutil"
 
 	"github.com/eparis/bugzilla"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
 	"github.com/openshift/library-go/pkg/controller/factory"
 	"github.com/openshift/library-go/pkg/operator/events"
 )

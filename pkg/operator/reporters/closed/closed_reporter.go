@@ -11,10 +11,10 @@ import (
 	"github.com/openshift/library-go/pkg/operator/events"
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/bugutil"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	"github.com/openshift-eng/shodan/pkg/operator/bugutil"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
 )
 
 type BlockersReporter struct {

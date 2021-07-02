@@ -9,9 +9,9 @@ import (
 
 	"github.com/dustin/go-humanize"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/slacker"
+	"github.com/openshift-eng/shodan/pkg/slacker"
 )
 
 type Controller struct {

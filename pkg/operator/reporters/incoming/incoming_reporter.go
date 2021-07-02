@@ -9,10 +9,10 @@ import (
 	"github.com/openshift/library-go/pkg/controller/factory"
 	"github.com/openshift/library-go/pkg/operator/events"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/bugutil"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	"github.com/openshift-eng/shodan/pkg/operator/bugutil"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
 )
 
 // IncomingReport reports bugs that are NEW and haven't been assigned yet.
@@ -21,7 +21,7 @@ import (
 // Additionally, a report of new bugs will be sent to the status channel.
 type IncomingReporter struct {
 	controller.ControllerContext
-	config config.OperatorConfig
+	config     config.OperatorConfig
 	components []string
 }
 

@@ -7,7 +7,7 @@ import (
 
 	"github.com/eparis/bugzilla"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
 )
 
 func GetBugURL(b bugzilla.Bug) string {

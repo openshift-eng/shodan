@@ -11,8 +11,8 @@ import (
 	"gopkg.in/yaml.v2"
 	"k8s.io/klog"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
 )
 
 func restartOnConfigChange(ctx context.Context, path string, startingContent []byte) {

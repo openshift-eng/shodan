@@ -1,4 +1,4 @@
-![Go](https://github.com/mfojtik/bugzilla-operator/workflows/Go/badge.svg)
+![Go](https://github.com/openshift-eng/shodan/workflows/Go/badge.svg)
 
 ### Bugzilla Operator
 
@@ -68,7 +68,7 @@ make install
 
 #### Configuration
 
-The operator is configured via YAML configuration file you have to pass via the bugzilla-operator run --config flag.
+The operator is configured via YAML configuration file you have to pass via the openshift-eng/shodan run --config flag.
 The operator automatically restart when this config is changed. The config is available via `configmap/operator-config`.
 
 License

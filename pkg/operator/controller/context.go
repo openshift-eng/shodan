@@ -13,9 +13,9 @@ import (
 	"k8s.io/client-go/util/retry"
 	"k8s.io/klog"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	"github.com/mfojtik/bugzilla-operator/pkg/slack"
-	"github.com/mfojtik/bugzilla-operator/pkg/slacker"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	"github.com/openshift-eng/shodan/pkg/slack"
+	"github.com/openshift-eng/shodan/pkg/slacker"
 )
 
 type ControllerContext struct {

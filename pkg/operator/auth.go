@@ -5,9 +5,9 @@ import (
 
 	"k8s.io/klog"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/slack"
-	"github.com/mfojtik/bugzilla-operator/pkg/slacker"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/slack"
+	"github.com/openshift-eng/shodan/pkg/slacker"
 )
 
 func auth(cfg config.OperatorConfig, handler func(req slacker.Request, w slacker.ResponseWriter), restrictedTo ...string) func(req slacker.Request, w slacker.ResponseWriter) {

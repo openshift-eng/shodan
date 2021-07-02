@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/bugutil"
+	"github.com/openshift-eng/shodan/pkg/operator/bugutil"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	operatorslack "github.com/mfojtik/bugzilla-operator/pkg/slack"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	operatorslack "github.com/openshift-eng/shodan/pkg/slack"
 	"github.com/slack-go/slack"
 	"github.com/slack-go/slack/slackevents"
 	"k8s.io/klog"

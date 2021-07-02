@@ -12,11 +12,11 @@ import (
 	errorutil "k8s.io/apimachinery/pkg/util/errors"
 	"k8s.io/klog"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/cache"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/bugutil"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/controller"
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/stalecontroller"
+	"github.com/openshift-eng/shodan/pkg/cache"
+	"github.com/openshift-eng/shodan/pkg/operator/bugutil"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/operator/stalecontroller"
 )
 
 type ResetStaleController struct {

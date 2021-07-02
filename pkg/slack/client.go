@@ -3,7 +3,7 @@ package slack
 import (
 	"fmt"
 
-	"github.com/mfojtik/bugzilla-operator/pkg/operator/config"
+	"github.com/openshift-eng/shodan/pkg/operator/config"
 
 	"github.com/slack-go/slack"
 )
