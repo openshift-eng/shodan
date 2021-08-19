@@ -9,14 +9,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/openshift-eng/shodan/pkg/operator/escalationcontroller"
-
-	"github.com/openshift-eng/shodan/pkg/operator/ideas"
-
-	"github.com/openshift-eng/shodan/pkg/operator/tagcontroller"
-
-	"github.com/openshift-eng/shodan/pkg/operator/reporters/stalepost"
-
+	"github.com/andygrunwald/go-jira"
 	"github.com/eparis/bugzilla"
 	"github.com/google/go-github/v33/github"
 	"github.com/openshift/library-go/pkg/controller/factory"
@@ -30,6 +23,7 @@ import (
 	"github.com/openshift-eng/shodan/pkg/operator/closecontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/config"
 	"github.com/openshift-eng/shodan/pkg/operator/controller"
+	"github.com/openshift-eng/shodan/pkg/operator/escalationcontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/firstteamcommentcontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/needinfocontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/reporters/blockers"
@@ -44,6 +38,11 @@ import (
 	"github.com/openshift-eng/shodan/pkg/operator/unfurl"
 	"github.com/openshift-eng/shodan/pkg/slack"
 	"github.com/openshift-eng/shodan/pkg/slacker"
+
+	"github.com/openshift-eng/shodan/pkg/operator/ideas"
+
+	"github.com/openshift-eng/shodan/pkg/operator/reporters/stalepost"
+	"github.com/openshift-eng/shodan/pkg/operator/tagcontroller"
 )
 
 const bugzillaEndpoint = "https://bugzilla.redhat.com"
@@ -89,6 +88,13 @@ func Run(ctx context.Context, cfg config.OperatorConfig) error {
 		return err
 	}
 	if err := unfurl.UnfurlGithubLinks(slackerInstance, slackClient, github.NewClient(nil)); err != nil {
+		return err
+	}
+	jiraClient, err := jira.NewClient(nil, "https://issues.redhat.com/")
+	if err != nil {
+		return err
+	}
+	if err := unfurl.UnfurlJiraLinks(slackerInstance, slackClient, jiraClient); err != nil {
 		return err
 	}
 
