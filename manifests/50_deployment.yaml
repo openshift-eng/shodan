@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - command:
-        - bugzilla-operator
+        - shodan
         - run
         - -v=9
         - --config
