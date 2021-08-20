@@ -29,7 +29,7 @@ func UnfurlJiraLinks(bus operatorslack.EventBus, client *slack.Client, jiraClien
 
 			u, err := url.Parse(l.URL)
 			if err != nil {
-				klog.Infof("failed to parse BZ url %q: %v", l, u)
+				klog.Infof("failed to parse jira url %q: %v", l, u)
 			}
 
 			if u.Host != "issues.redhat.com" {
