@@ -14,6 +14,7 @@ spec:
   source:
     git:
       uri: https://github.com/openshift-eng/shodan.git
+      ref: main
     type: Git
   strategy:
     dockerStrategy:
