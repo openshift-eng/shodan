@@ -25,6 +25,8 @@ import (
 	"github.com/openshift-eng/shodan/pkg/operator/controller"
 	"github.com/openshift-eng/shodan/pkg/operator/escalationcontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/firstteamcommentcontroller"
+	"github.com/openshift-eng/shodan/pkg/operator/ideas"
+	"github.com/openshift-eng/shodan/pkg/operator/metacomponentcontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/needinfocontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/reporters/blockers"
 	"github.com/openshift-eng/shodan/pkg/operator/reporters/closed"
@@ -32,17 +34,14 @@ import (
 	"github.com/openshift-eng/shodan/pkg/operator/reporters/incoming"
 	newreporter "github.com/openshift-eng/shodan/pkg/operator/reporters/new"
 	"github.com/openshift-eng/shodan/pkg/operator/reporters/reassign"
+	"github.com/openshift-eng/shodan/pkg/operator/reporters/stalepost"
 	"github.com/openshift-eng/shodan/pkg/operator/reporters/upcomingsprint"
 	"github.com/openshift-eng/shodan/pkg/operator/resetcontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/stalecontroller"
+	"github.com/openshift-eng/shodan/pkg/operator/tagcontroller"
 	"github.com/openshift-eng/shodan/pkg/operator/unfurl"
 	"github.com/openshift-eng/shodan/pkg/slack"
 	"github.com/openshift-eng/shodan/pkg/slacker"
-
-	"github.com/openshift-eng/shodan/pkg/operator/ideas"
-
-	"github.com/openshift-eng/shodan/pkg/operator/reporters/stalepost"
-	"github.com/openshift-eng/shodan/pkg/operator/tagcontroller"
 )
 
 const bugzillaEndpoint = "https://bugzilla.redhat.com"
@@ -117,6 +116,7 @@ func Run(ctx context.Context, cfg config.OperatorConfig) error {
 		"first-team-comment": firstteamcommentcontroller.NewFirstTeamCommentController(controllerContext, cfg, slackClient, recorder),
 		"needinfo":           needinfocontroller.NewNeedInfoController(controllerContext, cfg, recorder),
 		"urgent":             escalationcontroller.NewEscalationController(controllerContext, cfg, recorder),
+		"meta-component":     metacomponentcontroller.NewMetaComponentController(controllerContext, cfg, recorder),
 	}
 
 	ideasController := ideas.New(controllerContext)

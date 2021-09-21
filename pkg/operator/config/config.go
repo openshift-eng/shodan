@@ -80,6 +80,11 @@ type OperatorConfig struct {
 	Groups     map[string]Group `yaml:"groups"`
 	Components ComponentMap     `yaml:"components"`
 
+	// MetaComponents are components hidden via Developer Whiteboard field.
+	// The map key in this case represents a component name (eg. 'SingleNode') that is included Developer Whiteboard.
+	// This is used by component controller to properly change the default assignee for the NEW bugs to the meta-component owner.
+	MetaComponents ComponentMap `yaml:"metaComponents"`
+
 	// schedules define when reports are created, which contents and sent to which channel.
 	Schedules []AutomaticReport `yaml:"schedules"`
 
